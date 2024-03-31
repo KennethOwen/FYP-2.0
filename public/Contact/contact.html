@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../Styles/style.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Header Navigation Bar -->
+    <header class="header">
+        <div class="navbar">
+            <div class="logo"><a href="../index.html"><img src="./image/logo_removed_bg.png" style="height: 130px;" alt=""></a></div>
+            <ul class="links">
+                <li><a href="../index.html" style="--i:1" >Home</a></li>
+                <li><a href="../About/index.html" style="--i:2" >About</a></li>
+                <li><a href="../Services/index.html" style="--i:3" >Services</a></li>
+                <li><a href="../Contact/contact.html" style="--i:4" >Contact</a></li>
+            </ul>
+            <a href="#" class="action_btn" id="form-open">Sign Up / Login</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <!-- Dropdown Menu -->
+        <div class="dropdown_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="action_btn" id="form-open1">Sign Up / Login</a></li>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <i class="uil uil-times form_close"></i>
+            <!-- Login Form -->
+            <div class="form login_form">
+                <form action="#" id="loginForm">
+                    <h2>Login</h2>
+
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter your username" name="" id="userLogEmail" >
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Enter your password" name="" id="userLogPassword" >
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+
+                    <div class="option_field">
+                        <span class="checkbox">
+                            <input type="checkbox" name="" id="check">
+                            <label for="check">Remember me</label>
+                        </span>
+                        <a href="#" class="forgot_pw">Forgot password?</a>
+                    </div>
+
+                    <button type="button" id="loginBtn" class="button">Login Now</button>
+
+                    <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+                </form>
+            </div>
+            
+            <!-- Sign Up Form -->
+            <div class="form signup_form">
+                <form id="signUpForm">
+                    <h2>Signup</h2>
+                    <div class="input_box">
+                        <input type="text" placeholder="Enter your username" name="" id="userName" required>
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter your email" name="" id="userEmail" required>
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Create password" name="" id="userPassword" required>
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Confirm password" name="" id="conPassword" required>
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+
+                    <button type="button" id="signUpBtn" class="button">Signup Now</button>
+
+                    <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+                </form>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-form">
+                <section>
+                    <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                    <h2>address</h2>
+                    <p>
+                        Lorem ipsum dolor sit. <br>
+                        Lorem, ipsum dolor. <br>
+                        lorem
+                    </p>
+                </section>
+
+                <section>
+                    <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                    <h2>Phone</h2>
+                    <p>123-456-78901548</p>
+                </section>
+
+                <section>
+                    <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                    <h2>E-mail</h2>
+                    <p>dghdgqd@temporary.net</p>
+                </section>
+            </div>
+        </div>
+
+      <form>
+        <div class="form">
+            <div class="right">
+              <div class="contact-form">
+                  <input type="text" required>
+                  <span>Full Name</span>
+              </div>
+  
+              <div class="contact-form">
+                  <input type="E-mail" required>
+                  <span>E-mail Id</span>
+              </div>
+              <div class="contact-form">
+                  <textarea name="text">
+                    
+                  </textarea>
+                  <span> Type your Message....</span>
+              </div>
+  
+              <div class="contact-form">
+                  <input type="submit" name="submit">
+              </div>
+              </div>
+            </div>
+          </div>
+    </form>
+        <div class="media">
+            <li><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></li>
+            <li><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+            <li><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></li>
+            <li><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></li>
+        </div>
+        <div class="empty">
+
+        </div>
+    </div>  
+    <script type="module" src="../Main_Page/module.js"></script>  
+    <script src="contact.js"></script>
+</body>
+</html>

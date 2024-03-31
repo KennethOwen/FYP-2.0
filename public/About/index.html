@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mission & Vission 2022</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Styles/style.css">   
+</head>
+<body>
+    <!-- Header Navigation Bar -->
+    <header class="header">
+        <div class="navbar">
+            <div class="logo"><a href="../index.html"><img src="./image/logo_removed_bg.png" style="height: 130px;" alt=""></a></div>
+            <ul class="links">
+                <li><a href="../index.html" style="--i:1" >Home</a></li>
+                <li><a href="../About/index.html" style="--i:2" >About</a></li>
+                <li><a href="../Services/index.html" style="--i:3" >Services</a></li>
+                <li><a href="../Contact/contact.html" style="--i:4" >Contact</a></li>
+            </ul>
+            <a href="#" class="action_btn" id="form-open">Sign Up / Login</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <!-- Dropdown Menu -->
+        <div class="dropdown_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="action_btn" id="form-open1">Sign Up / Login</a></li>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <i class="uil uil-times form_close"></i>
+            <!-- Login Form -->
+            <div class="form login_form">
+                <form action="#" id="loginForm">
+                    <h2>Login</h2>
+
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter your username" name="" id="userLogEmail" >
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Enter your password" name="" id="userLogPassword" >
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+
+                    <div class="option_field">
+                        <span class="checkbox">
+                            <input type="checkbox" name="" id="check">
+                            <label for="check">Remember me</label>
+                        </span>
+                        <a href="#" class="forgot_pw">Forgot password?</a>
+                    </div>
+
+                    <button type="button" id="loginBtn" class="button">Login Now</button>
+
+                    <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+                </form>
+            </div>
+            
+            <!-- Sign Up Form -->
+            <div class="form signup_form">
+                <form id="signUpForm">
+                    <h2>Signup</h2>
+                    <div class="input_box">
+                        <input type="text" placeholder="Enter your username" name="" id="userName" required>
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter your email" name="" id="userEmail" required>
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Create password" name="" id="userPassword" required>
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Confirm password" name="" id="conPassword" required>
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+
+                    <button type="button" id="signUpBtn" class="button">Signup Now</button>
+
+                    <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+                </form>
+            </div>
+        </div>
+        <header id="header_sec">
+            <section id="coding_sec">
+                <div class="img_area half_area">
+                    <img src="../image/logo_removed_bg.png" alt="Coding Pic">
+                </div>
+                <div class="dis_code half_area">
+                    <h1>About Us</h1>
+                    <p>KJRent is your go-to destination for convenient car rentals and cozy homestay accommodations. We offer a wide range of well-maintained vehicles for all your travel needs, whether it's exploring scenic routes or navigating city streets. Our homestays provide a comfortable retreat with modern amenities, ensuring a relaxing stay during your travels. At KJRent, we're committed to making your journey smooth and enjoyable.</p>
+                    <button class="link_btn">Explore Now</button>
+            </section>
+        </header>
+        <section id="mission_sec">
+            <h1 class="center_align"> Our Mission, Vision & Goals <span ></span></h1>
+            <div class="flex_container">
+                <div class="mission">
+                    <img src="./img/mission_area_1.png" alt="Mission Pic">
+                    <h2>Mission</h2>
+                    <p> We're dedicated to delivering reliable and affordable car rentals and homestay options tailored to our customers' needs. Our diverse fleet, convenient booking, and personalized hospitality aim to enhance your overall travel experience.</p>
+                </div>
+                <div class="vission">
+                    <img src="./img/mission_area_2.png" alt="Vission Pic">
+                    <h2>Vission</h2>
+                    <p>Our vision is to be the top choice for travelers worldwide, offering seamless transportation and comfortable accommodations. We aim to create unforgettable travel experiences by providing exceptional service and exceeding expectations.</p>
+                </div>
+                <div class="goals">
+                    <img src="./img/mission_area_3.png" alt="Goals Pic">
+                    <h2>Goals</h2>
+                    <p>Our primary goal is to ensure utmost customer satisfaction by consistently delivering high-quality services, providing attentive customer support, and offering value-added amenities to enhance the overall travel experience.</p>
+                </div>
+            </div>
+        </section>
+        <section id="coding_sec">
+            <div class="img_area half_area">
+                <img src="../image/mustang.png" alt="Coding Pic">
+            </div>
+            <div class="dis_code half_area">
+                <h1>Car Rental</h1>
+                <p>Discover freedom on the road with KJRent's car rentals. Choose from a variety of reliable vehicles for any journey. Enjoy easy booking and personalized service, making your travel experience smooth and enjoyable. Travel confidently with KJRent.</p>
+        </section>
+        <section id="project_sec">
+            <div class="dis_pro half_area">
+                <h1>Homestay</h1>
+                <p>Experience comfort and warmth with KJRent's homestays. Whether in the city or countryside, find your perfect retreat with us. Enjoy modern amenities and personalized service for a memorable stay. Feel at home wherever you go with KJRent.</p>
+            </div>
+            <div class="img_area half_area mr_img">
+                <img src="../image/house.png" alt="Project Pic">
+            </div>
+        </section>
+        <section id="blog_sec">
+            <h1 class="center_align"> Explore On Our Latest Blog!</span></h1>
+            <div class="flex_container">
+                <div class="post_item">
+                <img src="../image/unForget_Img.jpg" alt="Post Pic">
+                <div class="txt_area">
+                <h2>Unforgettable Road Trips</h2>
+                <p>Discover scenic drives and lasting memories with KJRent's top road trip destinations.</p>
+                </div>
+                </div>
+                <div class="post_item">
+                    <img src="../image/localHos_Img.jpeg" alt="Post Pic">
+                    <div class="txt_area">
+                    <h2>Local Hospitality, Global Comfort</h2>
+                    <p>Experience authentic stays and warm welcomes with KJRent's homestays.</p>
+                    </div>
+                </div>
+                <div class="post_item">
+                    <img src="../image/flight_Img.jpg" alt="Post Pic">
+                    <div class="txt_area">
+                    <h2>Travel Smart with KJRent</h2>
+                    <p>Enhance your journey with insider tips and budget-friendly ideas from KJRent.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="../Main_Page/module2.js"></script>
+</body>
+</html>
