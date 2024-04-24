@@ -368,6 +368,29 @@ section .button button:hover {
   transform: translate(-50%, -50%) scale(1);
 }
 
+/* Explore Form Style */
+.home .home_content::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-out;
+}
+
+.home .home_content.showForm::before{
+  opacity: 1;
+  pointer-events: auto;
+}
+.home .home_content.showForm .exploreForm-container{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
 /* Sign Up Form */
 .signup_form {
   display: none;

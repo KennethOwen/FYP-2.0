@@ -27,9 +27,11 @@ const toggleBtn = document.querySelector(".toggle_btn");
 const toggleBtnIcon = document.querySelector(".toggle_btn i");
 const dropDownMenu = document.querySelector(".dropdown_menu");
 
+const formOpenExplore = document.querySelector("#open-form");
+
 const formOpenbtn = document.querySelector("#form-open");
 const formOpenbtn1 = document.querySelector("#form-open1"),
-home = document.querySelector(".homes"),
+home = document.querySelector(".home"),
 formContainer = document.querySelector(".form-container"),
 formClosebtn = document.querySelector(".form_close"),
 pwShowHide = document.querySelectorAll(".pw_hide");
@@ -79,6 +81,7 @@ pwShowHide.forEach(icon => {
 
     signOut(auth).then(() => {
       console.log('Sign-out successful.');
+      window.location.href = "../index.html";
       hideLoginBtn.style.display = "block";
       logout.style.display = "none";
     }).catch((error) =>{
@@ -127,8 +130,6 @@ pwShowHide.forEach(icon => {
     });
   });
 
-  
-
   // Showing Popup in Development
   signupBtn.addEventListener("click", function () {
     alert("Web is still in development. Registration is restricted.");
@@ -150,34 +151,4 @@ window.onscroll = function() {
   }else{
     nav.classList.remove("sticky");
   }
-
 }
-
-const overlay = document.querySelector("[data-overlay]");
-const navbar = document.querySelector("[data-navbar]");
-const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
-const navbarLinks = document.querySelectorAll("[data-nav-link]");
-
-const navToggleFunc = function () {
-  navToggleBtn.classList.toggle("active");
-  navbar.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-navToggleBtn.addEventListener("click", navToggleFunc);
-overlay.addEventListener("click", navToggleFunc);
-
-for (let i = 0; i < navbarLinks.length; i++) {
-  navbarLinks[i].addEventListener("click", navToggleFunc);
-}
-
-/**
- * header active on scroll
- */
-
-const header = document.querySelector("[data-header]");
-
-window.addEventListener("scroll", function () {
-  window.scrollY >= 10 ? header.classList.add("active")
-    : header.classList.remove("active");
-});

@@ -35,6 +35,7 @@ const firebaseConfig = {
 
   // Check if user logged in
   auth.onAuthStateChanged(user => {
+
     if (user) {
       hideLoginBtn.style.display = "none";
       logout.style.display = "block";
@@ -45,56 +46,37 @@ const firebaseConfig = {
     }
   })
 
-  // signupBtn.addEventListener("click", function () {
-  //   let usrEmailInp = document.getElementById('userEmail').value;
-  //   let usrPasswordInp = document.getElementById('userPassword').value;
-  //   formContainer.classList.remove("active")
-  //   createUserWithEmailAndPassword(auth,usrEmailInp,usrPasswordInp).then((userCredential) =>{
-  //     const user = userCredential.user;
-  //     console.log(user);
-  //     alert("Registration Successfully!");
-  //   })
-  //   .catch((error) =>{
-  //     const errorCode = error.code;
-  //     const errorMessage = error.message;
-
-  //     console.log(errorMessage);
-  //     alert(error);
-  //   });
-  // });
-
-  // Login function
-  loginBtn.addEventListener("click", function (e) {
+  // Make registered user admin
+  const adminForm = document.querySelector('.admin-actions');
+  adminForm.addEventListener('submit', (e) =>{
     e.preventDefault();
-    let usrEmailInp = document.getElementById('userLogEmail').value;
-    let usrPasswordInp = document.getElementById('userLogPassword').value;
-    let btnLogout = document.querySelector(".action_btn");
-    let logout = document.querySelector(".logout");
-
-    signInWithEmailAndPassword(auth,usrEmailInp,usrPasswordInp)
-    .then((userCredential) =>{
-      const user = userCredential.user;
-      console.log(user);
-      alert(user.email + "Login Successfully!");
-      window.location.href = "../menu/index.html";
+    const adminEmail = document.querySelector('#admin-email').value;
+    const addAdminRole = httpsCallable(functions,'addAdminRole');
+    addAdminRole({email: adminEmail}).then(result => {
+      console.log(result);
+    }).catch((error) =>{
+      console.log(error)
     })
-    .catch((error) =>{
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorMessage);
-      alert(errorMessage);
-    });
   });
 
+  
   // Logout Function
-  logout.addEventListener("click",function(){
+  logOutBtn.addEventListener("click",function(){
     signOut(auth).then(() => {
       console.log('Sign-out successful.');
-      window.location.href = "../index.html";
       hideLoginBtn.style.display = "block";
       logout.style.display = "none";
     }).catch((error) =>{
       console.log('An error happened.');
     })
   })
+
+  // // Showing Popup in Development
+  // signupBtn.addEventListener("click", function () {
+  //   alert("Web is still in development. Registration is restricted.");
+  // });
+
+  // loginBtn.addEventListener("click", function () {
+  //   alert("Web is still in development. Login/Registration is restricted.");
+  // });
   
